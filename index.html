@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Marta Apablaza — Periodista</title>
+  <title>Marta Apablaza — Journalist</title>
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
@@ -19,43 +19,54 @@
   <!-- ─── NAVBAR ─── -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#inicio">MA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="#home">MA</a>
+
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#navMenu"
+              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
+        <span class="toggler-bar"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <!-- Close button visible on mobile -->
+        <button class="nav-close-btn d-lg-none" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <i class="bi bi-x"></i>
+        </button>
+        <ul class="navbar-nav ms-auto gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">Selected Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#international">International</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-cta" href="#contact">Get in touch</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- ─── HERO ─── -->
-  <section id="inicio" class="hero-section d-flex align-items-center">
+  <section id="home" class="hero-section d-flex align-items-center">
     <div class="hero-noise"></div>
     <div class="container position-relative">
       <div class="row align-items-end">
         <div class="col-lg-8">
-          <p class="hero-eyebrow">Periodista · Santiago, Chile</p>
+          <p class="hero-eyebrow">Journalist · Santiago, Chile</p>
           <h1 class="hero-name">Marta<br/><span>Apablaza</span></h1>
           <p class="hero-tagline">
-            Comunicación estratégica y divulgación científica.<br/>
-            Traduciendo conocimiento complejo en narrativas con impacto.
+            Climate, Science &amp; Public Policy.<br/>
+            Translating complex systems into human stories.
           </p>
           <div class="hero-cta d-flex gap-3 flex-wrap">
-            <a href="#proyectos" class="btn btn-primary-custom">Ver proyectos</a>
-            <a href="#contacto" class="btn btn-outline-custom">Contacto</a>
+            <a href="#work" class="btn btn-primary-custom">View My Work</a>
+            <a href="#contact" class="btn btn-outline-custom">Contact Me</a>
           </div>
         </div>
         <div class="col-lg-4 text-end d-none d-lg-block">
           <div class="hero-deco">
             <span class="deco-line"></span>
-            <p class="deco-text">Ciencia · Medioambiente<br/>Políticas Públicas</p>
+            <p class="deco-text">Science · Environment<br/>Public Policy</p>
           </div>
         </div>
       </div>
@@ -66,31 +77,37 @@
     </div>
   </section>
 
-  <!-- ─── SOBRE MÍ ─── -->
-  <section id="sobre-mi" class="section-padded section-alt">
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section-padded section-alt">
     <div class="container">
       <div class="row gx-5 gy-4 align-items-start">
         <div class="col-lg-4">
-          <p class="section-label">01 — Sobre mí</p>
-          <h2 class="section-title">Contar historias<br/><em>que importan</em></h2>
+          <p class="section-label">01 — About</p>
+          <h2 class="section-title">Telling stories<br/><em>that matter</em></h2>
         </div>
         <div class="col-lg-7 offset-lg-1">
           <p class="lead-text">
-            Soy periodista especializada en comunicación estratégica y divulgación científica, 
-            con experiencia en medios internacionales, instituciones públicas y proyectos creativos propios.
+            Chilean journalist with over 10 years of experience in strategic communications,
+            academia and science storytelling.
           </p>
           <p class="body-text">
-            Me muevo con fluidez entre la ciencia, el medioambiente y las políticas públicas, 
-            construyendo puentes entre el conocimiento técnico y la audiencia. 
-            He trabajado desde Santiago hasta Dinamarca, y mi trabajo tiene siempre 
-            un eje: que la información compleja se sienta cercana, humana y útil.
+            My work focuses on making complex knowledge visible, understandable and meaningful
+            for wider audiences. I have reported on climate change, environmental transitions,
+            and technological innovation in Latin America — from Santiago to Denmark.
           </p>
+          <p class="body-text mt-3">
+            I have published in international outlets such as the Danish Development Research
+            Network (DDRN), covering climate and environmental stories from Chile for global readers.
+          </p>
+          <blockquote class="hero-quote mt-4">
+            I believe stories can make complex systems visible — and help us imagine more just futures.
+          </blockquote>
           <div class="row mt-4 gy-3">
             <div class="col-sm-6">
               <div class="info-card">
                 <i class="bi bi-mortarboard"></i>
                 <div>
-                  <strong>Periodismo</strong>
+                  <strong>Journalism</strong>
                   <span>Pontificia Universidad Católica de Chile</span>
                 </div>
               </div>
@@ -99,7 +116,7 @@
               <div class="info-card">
                 <i class="bi bi-book"></i>
                 <div>
-                  <strong>Historia</strong>
+                  <strong>History</strong>
                   <span>Universidad de Chile</span>
                 </div>
               </div>
@@ -109,7 +126,7 @@
                 <i class="bi bi-globe2"></i>
                 <div>
                   <strong>Climate Tracker</strong>
-                  <span>Becaria – Periodismo Climático</span>
+                  <span>Fellow – Climate Journalism</span>
                 </div>
               </div>
             </div>
@@ -117,8 +134,8 @@
               <div class="info-card">
                 <i class="bi bi-translate"></i>
                 <div>
-                  <strong>Inglés</strong>
-                  <span>Redacción y reporteo internacional</span>
+                  <strong>English</strong>
+                  <span>Reporting &amp; international writing</span>
                 </div>
               </div>
             </div>
@@ -128,106 +145,104 @@
     </div>
   </section>
 
-  <!-- ─── PROYECTOS ─── -->
-  <section id="proyectos" class="section-padded">
+  <!-- ─── SELECTED WORK ─── -->
+  <section id="work" class="section-padded">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-5">
-          <p class="section-label">02 — Proyectos</p>
-          <h2 class="section-title">Trabajo<br/><em>seleccionado</em></h2>
+          <p class="section-label">02 — Selected Work</p>
+          <h2 class="section-title">Stories<br/><em>that cross borders</em></h2>
         </div>
         <div class="col-lg-6 offset-lg-1 d-flex align-items-end">
           <p class="body-text">
-            Proyectos que cruzan fronteras, instituciones y formatos — 
-            con un propósito común: comunicar con claridad y sentido.
+            Projects that span institutions, formats and frontiers —
+            with one common purpose: communicate with clarity and meaning.
           </p>
         </div>
       </div>
 
       <div class="row gy-4">
 
-        <!-- Proyecto 1 -->
+        <!-- Project 1 -->
         <div class="col-lg-6">
           <div class="project-card" data-index="01">
-            <div class="project-tag">Periodismo Internacional</div>
-            <h3 class="project-title">Reportajes DDRN<br/><span>Dinamarca</span></h3>
+            <div class="project-tag">Climate &amp; Food Systems</div>
+            <h3 class="project-title">What If the Future<br/><span>Tastes Like Dried Watermelon?</span></h3>
             <p class="project-desc">
-              Cobertura internacional de cambio climático, transición energética y medioambiente en Chile. 
-              Publicados en inglés para audiencias globales con enfoque narrativo y humanista.
+              A narrative feature exploring how drought is reshaping taste, agriculture and daily life
+              in Chile. Based on field reporting with vendors, chefs and scientists.
             </p>
             <div class="project-skills d-flex flex-wrap gap-2">
-              <span class="skill-tag">Reporteo</span>
-              <span class="skill-tag">Inglés</span>
-              <span class="skill-tag">Cambio Climático</span>
-              <span class="skill-tag">Entrevistas</span>
+              <span class="skill-tag">Feature Writing</span>
+              <span class="skill-tag">Field Reporting</span>
+              <span class="skill-tag">Climate</span>
             </div>
             <div class="project-result">
               <i class="bi bi-arrow-right-circle"></i>
-              Posicionamiento como periodista ambiental internacional
+              Published for international audiences — DDRN, Denmark
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 2 -->
+        <!-- Project 2 -->
         <div class="col-lg-6">
           <div class="project-card" data-index="02">
-            <div class="project-tag">Comunicación Pública</div>
-            <h3 class="project-title">Ministerio de<br/><span>Hacienda</span></h3>
+            <div class="project-tag">Nature-Based Solutions</div>
+            <h3 class="project-title">The Goat Firefighters<br/><span>of Southern Chile</span></h3>
             <p class="project-desc">
-              Desarrollo de comunicados y contenido digital para audiencias ciudadanas. 
-              Traducción de información técnica económica en lenguaje accesible con impacto real.
+              A story on strategic grazing to prevent wildfires in Biobío, combining local knowledge
+              and scientific research. Human-centered reporting on environmental innovation.
             </p>
             <div class="project-skills d-flex flex-wrap gap-2">
-              <span class="skill-tag">Estrategia Digital</span>
-              <span class="skill-tag">Redacción</span>
-              <span class="skill-tag">Edición</span>
-              <span class="skill-tag">Política Pública</span>
+              <span class="skill-tag">Science Journalism</span>
+              <span class="skill-tag">Environment</span>
+              <span class="skill-tag">Interviews</span>
             </div>
             <div class="project-result">
               <i class="bi bi-arrow-right-circle"></i>
-              Fortalecimiento de la comunicación pública institucional
+              International environmental journalism
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 3 -->
+        <!-- Project 3 -->
         <div class="col-lg-6">
           <div class="project-card" data-index="03">
-            <div class="project-tag">Formación</div>
-            <h3 class="project-title">Taller de Datos<br/><span>para Periodistas</span></h3>
+            <div class="project-tag">Public Communications</div>
+            <h3 class="project-title">Ministry of Finance<br/><span>Chile</span></h3>
             <p class="project-desc">
-              Diseño e implementación de un programa formativo para incorporar el análisis 
-              de datos al trabajo periodístico cotidiano. Metodología práctica y accesible.
+              Development of press releases and digital content for citizen audiences.
+              Translating complex economic information into accessible, high-impact language.
             </p>
             <div class="project-skills d-flex flex-wrap gap-2">
-              <span class="skill-tag">Datos</span>
-              <span class="skill-tag">Facilitación</span>
-              <span class="skill-tag">Diseño curricular</span>
+              <span class="skill-tag">Strategic Comms</span>
+              <span class="skill-tag">Editing</span>
+              <span class="skill-tag">Public Policy</span>
             </div>
             <div class="project-result">
               <i class="bi bi-arrow-right-circle"></i>
-              Formación de periodistas en análisis de datos
+              Strengthened institutional public communications
             </div>
           </div>
         </div>
 
-        <!-- Proyecto 4 -->
+        <!-- Project 4 -->
         <div class="col-lg-6">
           <div class="project-card project-card--highlight" data-index="04">
-            <div class="project-tag">Proyecto Personal</div>
-            <h3 class="project-title">Hojas de Parra<br/><span>Plataforma creativa</span></h3>
+            <div class="project-tag">Youth &amp; Sustainability</div>
+            <h3 class="project-title">TikTok, Fast Fashion<br/><span>&amp; Chilean Rebellion</span></h3>
             <p class="project-desc">
-              Plataforma propia que integra astrología, narrativa y diseño editorial. 
-              Desarrollo de contenido, productos digitales y construcción de una identidad autoral única.
+              A feature on young designers using upcycling and social media as environmental
+              resistance — where creativity meets sustainability activism.
             </p>
             <div class="project-skills d-flex flex-wrap gap-2">
-              <span class="skill-tag">Dirección creativa</span>
-              <span class="skill-tag">Contenido</span>
-              <span class="skill-tag">Identidad de marca</span>
+              <span class="skill-tag">Creative Direction</span>
+              <span class="skill-tag">Content</span>
+              <span class="skill-tag">Brand Identity</span>
             </div>
             <div class="project-result">
               <i class="bi bi-arrow-right-circle"></i>
-              Construcción de voz autoral propia
+              Building an original authorial voice
             </div>
           </div>
         </div>
@@ -236,78 +251,142 @@
     </div>
   </section>
 
-  <!-- ─── EXPERIENCIA ─── -->
-  <section id="experiencia" class="section-padded section-alt">
+  <!-- ─── INTERNATIONAL WORK ─── -->
+  <section id="international" class="section-padded section-alt">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-5">
-          <p class="section-label">03 — Experiencia</p>
-          <h2 class="section-title">Trayectoria<br/><em>profesional</em></h2>
+          <p class="section-label">03 — International Work</p>
+          <h2 class="section-title">Chile through<br/><em>global eyes</em></h2>
+        </div>
+        <div class="col-lg-6 offset-lg-1 d-flex align-items-end">
+          <p class="body-text">
+            My international work focuses on translating environmental challenges in Chile
+            into human-centered stories for global audiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="intl-card">
+            <div class="intl-outlet">
+              <i class="bi bi-globe2"></i>
+              <span>DDRN · Denmark</span>
+            </div>
+            <h4 class="intl-title">A Love Story: How Chileans Try to Protect Their Coast</h4>
+            <p class="intl-desc">
+              Reporting on coastal conservation efforts, community resilience and environmental
+              identity in Chile for Danish and international readers.
+            </p>
+            <span class="intl-tag">Environment · Identity</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="intl-card">
+            <div class="intl-outlet">
+              <i class="bi bi-globe2"></i>
+              <span>DDRN · Denmark</span>
+            </div>
+            <h4 class="intl-title">Dealing With a Water-Hungry Enterprise</h4>
+            <p class="intl-desc">
+              An investigation into water scarcity, industrial pressure and local communities
+              navigating one of Chile's most pressing environmental crises.
+            </p>
+            <span class="intl-tag">Water · Resources</span>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="intl-card intl-card--highlight">
+            <div class="intl-outlet">
+              <i class="bi bi-award"></i>
+              <span>Climate Tracker · Fellow</span>
+            </div>
+            <h4 class="intl-title">Climate Journalism Fellowship</h4>
+            <p class="intl-desc">
+              Selected as a Climate Tracker fellow for specialized training in climate journalism
+              and international environmental reporting.
+            </p>
+            <span class="intl-tag">Fellowship · Climate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" class="section-padded">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-5">
+          <p class="section-label">04 — Experience</p>
+          <h2 class="section-title">Professional<br/><em>trajectory</em></h2>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="timeline">
 
-            <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <div class="timeline-org">Freelance – DDRN, Dinamarca</div>
-                <div class="timeline-role">Periodista Ambiental Internacional</div>
+                <div class="timeline-org">Freelance – DDRN, Denmark</div>
+                <div class="timeline-role">International Environmental Journalist</div>
                 <p class="timeline-desc">
-                  Reportajes en inglés sobre cambio climático, transición energética y medioambiente en Chile 
-                  para audiencias internacionales.
+                  Feature reporting in English on climate change, energy transition and the
+                  environment in Chile for international audiences.
                 </p>
                 <div class="d-flex gap-2 flex-wrap mt-2">
-                  <span class="skill-tag">Internacional</span>
-                  <span class="skill-tag">Medioambiente</span>
+                  <span class="skill-tag">International</span>
+                  <span class="skill-tag">Environment</span>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
                 <div class="timeline-org">Universidad de Chile – FCFM</div>
-                <div class="timeline-role">Periodista · Divulgación Científica</div>
+                <div class="timeline-role">Journalist · Science Communication</div>
                 <p class="timeline-desc">
-                  Especialista en comunicación y divulgación científica para la Facultad de Ciencias 
-                  Físicas y Matemáticas.
+                  Specialist in communication and science outreach for the Faculty of Physical
+                  and Mathematical Sciences.
                 </p>
                 <div class="d-flex gap-2 flex-wrap mt-2">
-                  <span class="skill-tag">Ciencia</span>
-                  <span class="skill-tag">Divulgación</span>
+                  <span class="skill-tag">Science</span>
+                  <span class="skill-tag">Outreach</span>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <div class="timeline-org">Ministerio de Hacienda – Chile</div>
-                <div class="timeline-role">Periodista · Comunicaciones Estratégicas</div>
+                <div class="timeline-org">Ministry of Finance – Chile</div>
+                <div class="timeline-role">Journalist · Strategic Communications</div>
                 <p class="timeline-desc">
-                  Redacción de comunicados institucionales, estrategia de contenidos digitales 
-                  y traducción de información técnica a lenguaje ciudadano.
+                  Writing institutional press releases, digital content strategy
+                  and translating technical economic information into citizen language.
                 </p>
                 <div class="d-flex gap-2 flex-wrap mt-2">
-                  <span class="skill-tag">Gobierno</span>
-                  <span class="skill-tag">Estrategia</span>
+                  <span class="skill-tag">Government</span>
+                  <span class="skill-tag">Strategy</span>
                 </div>
               </div>
             </div>
 
-            <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-item">
               <div class="timeline-dot"></div>
               <div class="timeline-content">
-                <div class="timeline-org">Ministerio del Medio Ambiente – Chile</div>
-                <div class="timeline-role">Comunicaciones Estratégicas y Territorial</div>
+                <div class="timeline-org">Ministry of the Environment – Chile</div>
+                <div class="timeline-role">Strategic &amp; Territorial Communications</div>
                 <p class="timeline-desc">
-                  Proyectos de comunicación estratégica con enfoque territorial y medioambiental.
+                  Strategic communications projects with a territorial and environmental focus
+                  across Chilean regions.
                 </p>
                 <div class="d-flex gap-2 flex-wrap mt-2">
-                  <span class="skill-tag">Medioambiente</span>
-                  <span class="skill-tag">Territorio</span>
+                  <span class="skill-tag">Environment</span>
+                  <span class="skill-tag">Territory</span>
                 </div>
               </div>
             </div>
@@ -318,13 +397,13 @@
     </div>
   </section>
 
-  <!-- ─── HABILIDADES ─── -->
-  <section id="habilidades" class="section-padded">
+  <!-- ─── SKILLS ─── -->
+  <section id="skills" class="section-padded section-alt">
     <div class="container">
       <div class="row mb-5">
         <div class="col-lg-5">
-          <p class="section-label">04 — Habilidades</p>
-          <h2 class="section-title">Qué<br/><em>hago bien</em></h2>
+          <p class="section-label">05 — Skills</p>
+          <h2 class="section-title">What I<br/><em>do well</em></h2>
         </div>
       </div>
 
@@ -332,42 +411,39 @@
         <div class="col-md-4">
           <div class="skill-group">
             <div class="skill-group-icon"><i class="bi bi-pen"></i></div>
-            <h4 class="skill-group-title">Técnicas</h4>
+            <h4 class="skill-group-title">Editorial</h4>
             <ul class="skill-list">
-              <li>Redacción periodística y storytelling</li>
-              <li>Comunicación científica</li>
-              <li>Edición de contenidos</li>
-              <li>Estrategia digital y contenidos</li>
-              <li>Entrevistas y reporteo</li>
-              <li>Traducción y escritura en inglés</li>
+              <li>Storytelling &amp; feature writing</li>
+              <li>Science communication</li>
+              <li>Content editing</li>
+              <li>Interviewing &amp; field reporting</li>
+              <li>Writing &amp; reporting in English</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-group">
+            <div class="skill-group-icon"><i class="bi bi-megaphone"></i></div>
+            <h4 class="skill-group-title">Communication</h4>
+            <ul class="skill-list">
+              <li>Strategic communications</li>
+              <li>Digital content strategy</li>
+              <li>Public policy translation</li>
+              <li>Institutional communications</li>
+              <li>Empathetic communication</li>
             </ul>
           </div>
         </div>
         <div class="col-md-4">
           <div class="skill-group">
             <div class="skill-group-icon"><i class="bi bi-tools"></i></div>
-            <h4 class="skill-group-title">Herramientas</h4>
+            <h4 class="skill-group-title">Tools</h4>
             <ul class="skill-list">
               <li>WordPress</li>
               <li>Canva</li>
               <li>Instagram · LinkedIn · X</li>
-              <li>Edición básica audio/video</li>
-              <li>Microsoft Office</li>
+              <li>Basic audio/video editing</li>
               <li>Google Workspace</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="skill-group">
-            <div class="skill-group-icon"><i class="bi bi-stars"></i></div>
-            <h4 class="skill-group-title">Blandas</h4>
-            <ul class="skill-list">
-              <li>Pensamiento estratégico</li>
-              <li>Capacidad de síntesis</li>
-              <li>Comunicación empática</li>
-              <li>Autonomía y autogestión</li>
-              <li>Gestión de proyectos</li>
-              <li>Sensibilidad narrativa</li>
             </ul>
           </div>
         </div>
@@ -375,17 +451,17 @@
     </div>
   </section>
 
-  <!-- ─── CONTACTO ─── -->
-  <section id="contacto" class="section-padded contact-section">
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section-padded contact-section">
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-6">
-          <p class="section-label light">05 — Contacto</p>
-          <h2 class="section-title light">Hablemos<br/><em>de tu proyecto</em></h2>
+          <p class="section-label light">06 — Contact</p>
+          <h2 class="section-title light">Let's work<br/><em>together</em></h2>
           <p class="body-text light mt-3">
-            Disponible para proyectos freelance, colaboraciones internacionales 
-            y oportunidades en comunicación estratégica, divulgación científica 
-            y periodismo medioambiental.
+            Available for editorial collaborations, fellowships, freelance reporting
+            and opportunities in strategic communications, science journalism
+            and environmental media.
           </p>
           <div class="contact-links mt-4 d-flex flex-column gap-3">
             <a href="mailto:marta.apablaza@gmail.com" class="contact-link">
@@ -404,17 +480,17 @@
         </div>
         <div class="col-lg-5 offset-lg-1">
           <div class="contact-card">
-            <h5>Envía un mensaje</h5>
+            <h5>Send a message</h5>
             <div class="mb-3">
-              <input type="text" class="form-control custom-input" placeholder="Tu nombre"/>
+              <input type="text" class="form-control custom-input" placeholder="Your name"/>
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control custom-input" placeholder="Tu email"/>
+              <input type="email" class="form-control custom-input" placeholder="Your email"/>
             </div>
             <div class="mb-3">
-              <textarea class="form-control custom-input" rows="4" placeholder="Cuéntame sobre tu proyecto..."></textarea>
+              <textarea class="form-control custom-input" rows="4" placeholder="Tell me about your project..."></textarea>
             </div>
-            <button class="btn btn-primary-custom w-100" id="sendBtn">Enviar mensaje</button>
+            <button class="btn btn-primary-custom w-100" id="sendBtn">Get in touch</button>
           </div>
         </div>
       </div>
@@ -425,7 +501,7 @@
   <footer class="site-footer">
     <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
       <span class="footer-brand">Marta Apablaza</span>
-      <span class="footer-copy">© 2025 · Periodista · Santiago, Chile</span>
+      <span class="footer-copy">© 2025 · Journalist · Santiago, Chile</span>
       <a href="https://www.linkedin.com/in/mvapablaza/" target="_blank" class="footer-link">
         <i class="bi bi-linkedin"></i> LinkedIn
       </a>

@@ -4,22 +4,18 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. Navbar: cambia estilo al hacer scroll ── */
+  /* ── 1. Navbar scroll style ── */
   const nav = document.getElementById('mainNav');
 
   const handleNavScroll = () => {
-    if (window.scrollY > 60) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
+    nav.classList.toggle('scrolled', window.scrollY > 60);
   };
 
   window.addEventListener('scroll', handleNavScroll, { passive: true });
   handleNavScroll();
 
 
-  /* ── 2. Scroll suave ── */
+  /* ── 2. Smooth scroll on nav links ── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
       const target = document.querySelector(anchor.getAttribute('href'));
@@ -30,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
       window.scrollTo({ top, behavior: 'smooth' });
 
+      // Close mobile menu if open
       const navCollapse = document.getElementById('navMenu');
       if (navCollapse.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
@@ -39,44 +36,57 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── 3. Reveal on scroll — animaciones variadas ── */
+  /* ── 3. Mobile menu: lock body scroll when open ── */
+  const navMenu = document.getElementById('navMenu');
 
-  // Sección labels y títulos: slide desde la izquierda
+  navMenu.addEventListener('show.bs.collapse', () => {
+    document.body.style.overflow = 'hidden';
+  });
+
+  navMenu.addEventListener('hide.bs.collapse', () => {
+    document.body.style.overflow = '';
+  });
+
+
+  /* ── 4. Reveal on scroll — varied animations ── */
+
+  // Titles → slide from left
   document.querySelectorAll('.section-label, .section-title').forEach(el => {
     el.classList.add('reveal-left');
   });
 
-  // Lead text y body text: fade up estándar
-  document.querySelectorAll('.lead-text, .body-text').forEach(el => {
+  // Body text → fade up
+  document.querySelectorAll('.lead-text, .body-text, .hero-quote').forEach(el => {
     el.classList.add('reveal');
   });
 
-  // Info cards: scale fade
-  document.querySelectorAll('.info-card').forEach(el => {
+  // Info & intl cards → scale in
+  document.querySelectorAll('.info-card, .intl-card').forEach(el => {
     el.classList.add('reveal-scale');
   });
 
-  // Project cards: fade up con stagger
+  // Project cards → fade up
   document.querySelectorAll('.project-card').forEach(el => {
     el.classList.add('reveal');
   });
 
-  // Skill groups: slide desde la derecha
+  // Skill groups → slide from right
   document.querySelectorAll('.skill-group').forEach(el => {
     el.classList.add('reveal-right');
   });
 
-  // Contact card: scale
+  // Contact card → scale in
   document.querySelectorAll('.contact-card').forEach(el => {
     el.classList.add('reveal-scale');
   });
 
-  // Observer genérico para todas las variantes
+  // Shared observer for all reveal types
+  const revealClasses = ['reveal', 'reveal-left', 'reveal-right', 'reveal-scale'];
+
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const parent = entry.target.parentElement;
-        const revealClasses = ['reveal', 'reveal-left', 'reveal-right', 'reveal-scale'];
         const siblings = [...parent.children].filter(c =>
           revealClasses.some(cls => c.classList.contains(cls))
         );
@@ -96,14 +106,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── 4. Timeline: reveal con animación escalonada ── */
+  /* ── 5. Timeline staggered reveal ── */
   const timelineItems = document.querySelectorAll('.timeline-item');
 
   const timelineObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const allItems = [...timelineItems];
-        const idx = allItems.indexOf(entry.target);
+        const idx = [...timelineItems].indexOf(entry.target);
         entry.target.style.transitionDelay = `${idx * 0.15}s`;
         entry.target.classList.add('visible');
         timelineObserver.unobserve(entry.target);
@@ -117,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   timelineItems.forEach(el => timelineObserver.observe(el));
 
 
-  /* ── 5. Nav link activo según sección visible ── */
+  /* ── 6. Active nav link on scroll ── */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -141,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(s => sectionObserver.observe(s));
 
 
-  /* ── 6. Formulario de contacto ── */
+  /* ── 7. Contact form ── */
   const sendBtn = document.getElementById('sendBtn');
 
   if (sendBtn) {
@@ -160,16 +169,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      sendBtn.textContent = 'Enviando...';
+      sendBtn.textContent = 'Sending...';
       sendBtn.disabled = true;
 
       setTimeout(() => {
-        sendBtn.textContent = '✓ Mensaje enviado';
+        sendBtn.textContent = '✓ Message sent';
         sendBtn.style.background = '#2c6e3a';
         sendBtn.style.color = '#fff';
 
         setTimeout(() => {
-          sendBtn.textContent = 'Enviar mensaje';
+          sendBtn.textContent = 'Get in touch';
           sendBtn.style.background = '';
           sendBtn.style.color = '';
           sendBtn.disabled = false;
@@ -180,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  /* ── 7. Hover parallax en project cards ── */
+  /* ── 8. Project card parallax hover ── */
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
