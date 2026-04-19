@@ -21,19 +21,8 @@
     <div class="container">
       <a class="navbar-brand" href="#home">MA</a>
 
-      <button class="navbar-toggler" type="button"
-              data-bs-toggle="collapse" data-bs-target="#navMenu"
-              aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="toggler-bar"></span>
-        <span class="toggler-bar"></span>
-        <span class="toggler-bar"></span>
-      </button>
-
+      <!-- Desktop nav (hidden on mobile via CSS) -->
       <div class="collapse navbar-collapse" id="navMenu">
-        <!-- Close button visible on mobile -->
-        <button class="nav-close-btn d-lg-none" data-bs-toggle="collapse" data-bs-target="#navMenu">
-          <i class="bi bi-x"></i>
-        </button>
         <ul class="navbar-nav ms-auto gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#work">Selected Work</a></li>
@@ -43,8 +32,52 @@
           <li class="nav-item"><a class="nav-link nav-link-cta" href="#contact">Get in touch</a></li>
         </ul>
       </div>
+
+      <!-- Custom hamburger (mobile only) -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </nav>
+
+  <!-- ─── MOBILE MENU OVERLAY ─── -->
+  <div class="mobile-overlay" id="mobileOverlay" role="dialog" aria-modal="true" aria-label="Navigation">
+    <div class="mobile-overlay__backdrop" id="overlayBackdrop"></div>
+    <div class="mobile-overlay__panel">
+      <div class="mobile-overlay__header">
+        <span class="mobile-overlay__brand">MA</span>
+        <button class="mobile-close" id="overlayClose" aria-label="Close menu">
+          <i class="bi bi-x"></i>
+        </button>
+      </div>
+
+      <ul class="mobile-overlay__nav" id="mobileNav">
+        <li><a class="mobile-overlay__link" href="#about">
+          About <i class="bi bi-chevron-right"></i>
+        </a></li>
+        <li><a class="mobile-overlay__link" href="#work">
+          Selected Work <i class="bi bi-chevron-right"></i>
+        </a></li>
+        <li><a class="mobile-overlay__link" href="#international">
+          International <i class="bi bi-chevron-right"></i>
+        </a></li>
+        <li><a class="mobile-overlay__link" href="#experience">
+          Experience <i class="bi bi-chevron-right"></i>
+        </a></li>
+        <li><a class="mobile-overlay__link" href="#skills">
+          Skills <i class="bi bi-chevron-right"></i>
+        </a></li>
+      </ul>
+
+      <div class="mobile-overlay__cta">
+        <a href="#contact" class="mobile-overlay__cta-btn">
+          <i class="bi bi-envelope"></i> Get in touch
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ─── HERO ─── -->
   <section id="home" class="hero-section d-flex align-items-center">
@@ -202,9 +235,10 @@
               <i class="bi bi-arrow-right-circle"></i>
               International environmental journalism
             </div>
-            <a href="Nota 2.pdf" class="btn btn-dark mt-3">
-              View full article
-            </a>
+              <!-- 👇 BOTÓN -->
+              <a href="Nota 2.pdf" target="_blank" class="btn btn-outline-dark mt-3">
+                  View full article
+              </a>
           </div>
         </div>
 
@@ -284,10 +318,10 @@
             </p>
             <span class="intl-tag">Environment · Identity</span>
           </div>
-          <!-- 👇 BOTÓN -->
-          <a href="https://ddrn.dk/14128/" target="_blank" class="btn btn-outline-dark mt-3">
-            View full article
-          </a>
+            <!-- 👇 BOTÓN -->
+            <a href="https://ddrn.dk/14128/" target="_blank" class="btn btn-outline-dark mt-3">
+                View full article
+            </a>
         </div>
         <div class="col-lg-4">
           <div class="intl-card">
@@ -302,10 +336,10 @@
             </p>
             <span class="intl-tag">Water · Resources</span>
           </div>
-          <!-- 👇 BOTÓN -->
-          <a href="https://ddrn.dk/13028/" target="_blank" class="btn btn-outline-dark mt-3">
-            View full article
-          </a>
+            <!-- 👇 BOTÓN -->
+            <a href="https://ddrn.dk/13028/" target="_blank" class="btn btn-outline-dark mt-3">
+                View full article
+            </a>
         </div>
         <div class="col-lg-4">
           <div class="intl-card intl-card--highlight">
@@ -320,10 +354,10 @@
             </p>
             <span class="intl-tag">Fellowship · Climate</span>
           </div>
-          <!-- 👇 BOTÓN -->
-          <a href="certificado.pdf" target="_blank" class="btn btn-outline-dark mt-3">
-            Fellowship certificate
-          </a>
+            <!-- 👇 BOTÓN -->
+            <a href="certificado.pdf" target="_blank" class="btn btn-outline-dark mt-3">
+                Fellowship certificate
+            </a>
         </div>
       </div>
     </div>
