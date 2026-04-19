@@ -530,17 +530,50 @@
         <div class="col-lg-5 offset-lg-1">
           <div class="contact-card">
             <h5>Send a message</h5>
-            <div class="mb-3">
-              <input type="text" class="form-control custom-input" placeholder="Your name"/>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control custom-input" placeholder="Your email"/>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control custom-input" rows="4" placeholder="Tell me about your project..."></textarea>
-            </div>
-            <button class="btn btn-primary-custom w-100" id="sendBtn">Get in touch</button>
+
+            <form action="https://formspree.io/f/xvzdqode" method="POST">
+
+              <div class="mb-3">
+                <input
+                        type="text"
+                        name="name"
+                        class="form-control custom-input"
+                        placeholder="Your name"
+                        required
+                />
+              </div>
+
+              <div class="mb-3">
+                <input
+                        type="email"
+                        name="email"
+                        class="form-control custom-input"
+                        placeholder="Your email"
+                        required
+                />
+              </div>
+
+              <div class="mb-3">
+        <textarea
+                name="message"
+                class="form-control custom-input"
+                rows="4"
+                placeholder="Tell me about your project..."
+                required
+        ></textarea>
+              </div>
+
+              <!-- Anti-spam -->
+              <input type="text" name="_gotcha" style="display:none">
+
+              <button type="submit" class="btn btn-primary-custom w-100">
+                Get in touch
+              </button>
+
+            </form>
+
           </div>
+        </div>
         </div>
       </div>
     </div>
